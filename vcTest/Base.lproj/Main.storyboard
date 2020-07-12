@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gcC-l1-kVI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -82,6 +82,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="E3A-ZP-vAS">
+                        <barButtonItem key="rightBarButtonItem" title="&gt;&gt;" id="Hcu-dw-ev9">
+                            <connections>
+                                <action selector="onSubmitNavi:" destination="BYZ-38-t0r" id="3lb-VH-b9B"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="email" destination="yP7-3Q-3d4" id="SUf-vg-Fev"/>
                         <outlet property="idUpdateText" destination="Ahy-62-HPb" id="GXH-ur-gUy"/>
@@ -92,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-739" y="167"/>
+            <point key="canvasLocation" x="171.01449275362319" y="166.74107142857142"/>
         </scene>
         <!--VC2-->
         <scene sceneID="4tD-7c-jhZ">
@@ -152,10 +159,19 @@
                                     <action selector="back:" destination="DA0-wD-LbX" eventType="touchUpInside" id="KLd-3K-9lj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84g-hC-Xh4">
+                                <rect key="frame" x="203" y="503" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="backNavi"/>
+                                <connections>
+                                    <action selector="backNavi:" destination="DA0-wD-LbX" eventType="touchUpInside" id="HPU-Gc-1hb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="o3Y-A2-r4Z"/>
                     </view>
+                    <navigationItem key="navigationItem" id="rlC-zT-oSf"/>
                     <connections>
                         <outlet property="resEmail" destination="0A2-m4-2Ue" id="rIu-kp-28H"/>
                         <outlet property="resInterval" destination="tuw-vF-Im7" id="6qL-Y6-FzD"/>
@@ -164,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lyT-rz-F3Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="167"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="166.74107142857142"/>
         </scene>
         <!--VC3-->
         <scene sceneID="JcV-SI-s12">
@@ -195,6 +211,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zd3-MD-Rya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138" y="858"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CUA-Zb-E41">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gcC-l1-kVI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="19p-rl-W7U">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="L8C-w8-08I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lxr-2r-l6p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-739.13043478260875" y="166.74107142857142"/>
         </scene>
     </scenes>
 </document>

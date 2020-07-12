@@ -35,4 +35,7 @@ class VC2: UIViewController{
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    @IBAction func backNavi(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }

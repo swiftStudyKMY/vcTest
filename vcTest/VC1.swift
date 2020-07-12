@@ -38,9 +38,6 @@ class VC1: UIViewController {
         
     }
     
-    
-
-    
     @IBAction func onSubmit(_ sender: Any) {
         
         guard let rvc = self.storyboard?.instantiateViewController(identifier: "VC2") as? VC2 else{
@@ -53,9 +50,20 @@ class VC1: UIViewController {
         
         self.present(rvc, animated: true)
         
-        
-        
     }
+    
+    @IBAction func onSubmitNavi(_ sender: Any) {
+        guard let rvc = self.storyboard?.instantiateViewController(identifier: "VC2") as? VC2 else{
+            return
+        }
+        
+        rvc.paramEmail = self.email.text!
+        rvc.paramUpdate = self.isUpdate.isOn
+        rvc.paramInterval = self.interval.value
+        
+        self.navigationController?.pushViewController(rvc, animated: true)
+    }
+    
     
 }
 
