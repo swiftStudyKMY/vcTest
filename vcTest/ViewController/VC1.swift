@@ -21,6 +21,28 @@ class VC1: UIViewController {
         // Do any additional setup after loading the view.
         print("VC1 viewDidLoad call")
     }
+    @IBAction func moveToVc4(_ sender: Any) {
+        
+        let storyBoard : UIStoryboard = self.storyboard!
+        
+        let nextSB = storyBoard.instantiateViewController(identifier: "VC4")
+        
+        self.present(nextSB, animated: true, completion: nil)
+        
+        
+    }
+    @IBAction func moveToVc5(_ sender: Any) {
+        let story : UIStoryboard = UIStoryboard(name: "next", bundle: nil)
+        
+        let nextVc = story.instantiateInitialViewController()
+        
+//        let nextVc = story.instantiateInitialViewController()
+//        let nextVc = story.instantiateViewController(identifier: "VC5")
+
+        self.present(nextVc!, animated: true, completion: nil)
+    
+        
+    }
     
     @IBAction func onSwitch(_ sender: UISwitch) {
         if sender.isOn == true {
@@ -64,6 +86,22 @@ class VC1: UIViewController {
         self.navigationController?.pushViewController(rvc, animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination
+        
+        guard let rvc = dest as? VC2 else{
+            return
+        }
+        
+        rvc.paramEmail = self.email.text!
+        rvc.paramUpdate = self.isUpdate.isOn
+        rvc.paramInterval = self.interval.value
+        
+    }
+    
+    @IBAction func onPerformSegue (_ sender : Any){
+        self.performSegue(withIdentifier: "VC2", sender: self)
+    }
     
 }
 

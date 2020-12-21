@@ -1,19 +1,19 @@
 //
-//  VC3.swift
+//  VC5.swift
 //  vcTest
 //
-//  Created by 김민영 on 7/12/20.
+//  Created by 김민영 on 12/22/20.
 //  Copyright © 2020 MINYOUNGKIM. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class VC3: UIViewController{
+class VC5 : UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("VC3 viewDidLoad call")
+        print("VC5 viewDidLoad() call")
     }
     
 }
